@@ -1,0 +1,34 @@
+<!-- horizontal line -->
+<div class="h-[1px] my-8 bg-slate-400"></div>
+
+<div>
+  <div class="flex gap-8">
+    <div class="flex flex-col w-1/5 text-left">
+      <label for="name" class="pl-1">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="border-slate-800 border-solid border-[1px] rounded-lg py-1 px-2"
+        [(ngModel)]="ingredientName"
+      />
+    </div>
+    <div class="flex flex-col w-1/12 text-left">
+      <label for="amount" class="pl-1">Amount</label>
+      <input
+        type="number"
+        id="amount"
+        class="border-slate-800 border-solid border-[1px] rounded-lg py-1 px-2"
+        [(ngModel)]="ingredientAmount"
+      />
+    </div>
+  </div>
+  <div class="text-left flex gap-4 my-4">
+    <app-button
+      text="add"
+      href="#"
+      (click)="addIngredient(ingredientName, ingredientAmount)"
+    ></app-button>
+    <app-button text="remove" href="#"></app-button>
+    <app-button text="clear" href="#"></app-button>
+  </div>
+</div>

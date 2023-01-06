@@ -1,0 +1,9 @@
+<app-shopping-edit></app-shopping-edit>
+
+<div class="w-full text-left">
+  <ul class="my-4 flex flex-col">
+    <a *ngFor="let ingredient of ingredients" class="my-2 p-2 bg-slate-100">
+      {{ ingredient.name }}, {{ ingredient.amount }} pcs
+    </a>
+  </ul>
+</div>

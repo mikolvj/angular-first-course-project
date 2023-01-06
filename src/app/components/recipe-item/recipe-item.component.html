@@ -1,0 +1,21 @@
+<div
+  class="w-full h-auto bg-slate-100 my-4 rounded-xl overflow-hidden shadow-md"
+>
+  <a href="#">
+    <div class="flex items-center justify-between">
+      <div class="p-4 text-left w-1/2">
+        <h3 class="text-lg font-bold">
+          {{ recipe.name }}
+        </h3>
+        <p class="text-sm">
+          {{ recipe.description }}
+        </p>
+      </div>
+      <img
+        src="{{ recipe.imagePath }}"
+        alt="{{ recipe.name }}"
+        class="h-full w-1/2"
+      />
+    </div>
+  </a>
+</div>

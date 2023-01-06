@@ -1,0 +1,21 @@
+<nav
+  class="container mx-auto flex justify-between items-center px-8 text-slate-800"
+>
+  <a href="#"
+    ><h1 class="text-3xl font-bold text-center py-8">Recipe Book</h1></a
+  >
+  <div class="flex gap-8">
+    <ul class="flex gap-8">
+      <a href="#"><li>Recipes</li></a>
+      <a href="#"><li>Shopping list</li></a>
+    </ul>
+
+    <div class="relative">
+      <p (click)="toggleDropdown()">Manage</p>
+      <ul *ngIf="isDropdownOpen" class="absolute -bottom-20 -left-0 leading-8">
+        <a href="#"><li>Save</li></a>
+        <a href="#"><li>Update</li></a>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,25 @@
+<div class="w-full text-left">
+  <div>
+    <img
+      src="{{ selectedRecipe.imagePath }}"
+      alt="{{ selectedRecipe.name }}"
+      class="max-h-40"
+    />
+  </div>
+
+  <h2 class="text-2xl font-bold my-4">{{ selectedRecipe.name }}</h2>
+
+  <div class="flex gap-4 my-4">
+    <app-button href="#" text="to shopping list" (click)="addToShoppingList(selectedRecipe.ingredients)"></app-button>
+    <app-button href="#" text="edit"></app-button>
+    <app-button href="#" text="remove"></app-button>
+  </div>
+
+  <p>{{ selectedRecipe.description }}</p>
+  <p>Ingredients:</p>
+  <ul>
+    <li *ngFor="let ingredient of selectedRecipe.ingredients">
+      {{ ingredient.name }}, {{ ingredient.amount }} pcs
+    </li>
+  </ul>
+</div>
